@@ -221,6 +221,7 @@ div.heading {
   width: 50%;
   padding: 5px;
   text-align: center;
+  overflow-x: auto;
 }
 .quote-container .quote {
   margin-bottom: 10px;
@@ -271,5 +272,11 @@ div.heading {
   border-radius: 3px;
 }
 
+/**----------responsive-----**/
 
+@media screen and (max-width: 600px) {
+  .bill-board {
+    flex-direction: column;
+  }
+}
 
