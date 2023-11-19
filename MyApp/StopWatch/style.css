@@ -1,0 +1,82 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: #273238;
+    color: #f8fff1;
+    font-size: 50px;
+}
+
+.container {
+    height: 100%;
+    flex-direction: column;
+}
+
+.watch-display {
+    border-collapse: collapse;
+    background: #f9ebea;
+    color: #101211;
+}
+
+td {
+    border: 5px solid #ff6453;
+    padding: 20px;
+    text-align: center;
+}
+
+.label {
+    justify-content: space-around;
+}
+
+.ctrl-btn .btn {
+    color: #fff;
+    background: linear-gradient(to top, #00154c, #12376e, #23487f);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    width: 90px;
+    padding: 7px;
+    cursor: pointer;
+    position: relative;
+}
+
+.hh,
+.mm,
+.ss {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.ctrl-btn .btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+}
+
+.ctrl-btn .btn:active:after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.ctrl-btn .btn:active {
+    top: 1px;
+}

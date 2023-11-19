@@ -1,0 +1,52 @@
+
+html { 
+  background: url(images/bg.jpg) no-repeat center center absolute; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body {
+  font-family: avenir, sans-serif;
+  background-color:#201c2a;
+}
+
+table {
+	border-spacing: 0.3rem;
+}
+th, td {
+  border: 3px solid #e52e71;
+  padding: 10px;
+  background-color:#100f17;
+  text-align: center;
+  font-size:20px; 
+}
+
+th {
+	color:#6bddc4;
+}
+
+a {
+	text-decoration: none;
+	color:#fe5514;
+}
+
+a:hover {
+	color: greenyellow;
+}
+
+div.heading {
+	text-align: center;
+	color: darkorange;
+}
+
+div.table-1, div.table-2, div.table-3, div.table-4 {
+	float: left;
+}
+
+div {
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
