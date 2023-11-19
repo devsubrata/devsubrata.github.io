@@ -213,6 +213,12 @@ div.heading {
   margin: 0 auto;
 }
 
+.plain-clock {
+  border: 3px solid rgb(240, 136, 157);
+  text-align: center;
+  overflow-x: auto;
+}
+
 .quote-container .category {
   margin-top: -40px;
   margin-bottom: 20px;
@@ -277,6 +283,17 @@ div.heading {
 @media screen and (max-width: 600px) {
   .bill-board {
     flex-direction: column;
+  }
+  .quote-container .category {
+    width: 110%;
+  }
+
+  .plain-clock {
+    display: block;
+  }
+
+  .datetime {
+    display: none;
   }
 }
 
