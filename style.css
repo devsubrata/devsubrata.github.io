@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +8,7 @@
 
 body {
   font-family: "Roboto Slab", sans-serif;
-  background-color: #eee;
-  height: 100vh;
+  background-color: hsl(64, 75%, 84%);
 }
 
 /*****************End of Flex bar*******************/
@@ -20,9 +21,10 @@ body {
   padding: 5px 0;
   background-color: rgb(245, 134, 93);
   width: 100%;
-  z-index: 100;
   position: sticky;
   top: 0;
+
+  z-index: 10;
 }
 
 .flex-item {
@@ -30,8 +32,8 @@ body {
   height: 50px;
   padding: 0;
   list-style: none;
-  text-wrap: wrap;
 }
+
 .ps {
   width: 170px;
 }
@@ -48,8 +50,7 @@ body {
   display: block;
   padding: 15px 5px;
   text-align: center;
-  /* border: 1px solid silver; */
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   font-weight: bold;
 }
 
@@ -66,21 +67,21 @@ body {
 .flex-item .flex-submenu-container {
   display: flex;
   flex-flow: column nowrap;
-  width: 180px;
+  width: 200px;
   list-style: none;
   color: white;
   padding: 0;
-  z-index: 100;
 }
 
 .flex-item .flex-submenu-container a {
   text-decoration: none;
   display: block;
   padding: 10px 20px;
-  background-color: rgb(248, 72, 8);
+  background-color: rgb(243, 99, 47);
   color: white;
-  border: 1px solid silver;
-  border-radius: 10px;
+  border: 1px solid rgb(248, 71, 6);
+  position: relative;
+  z-index: 100;
 }
 
 .flex-item .flex-submenu-container a:hover {
@@ -93,24 +94,38 @@ body {
 .submenu-list .flex-submenu-container {
   display: none;
 }
+.submenu-list .flex-submenu-container .flex-item-submenu:last-child a{
+  border-radius: 0 0 10px 10px;
+}
+.submenu-list .flex-submenu-container .flex-item-submenu:first-child a{
+  border-radius: 0 10px 0 0;
+}
 
 .flex-item:hover .flex-submenu-container {
   display: block;
-  z-index: 100;
 }
 /*---------------section----------------*/
-.learn {
+section {
   width: 100vw;
   height: 100vh;
   background-color: #ddd;
-  padding: 2rem;
+  padding: 30px;
+  overflow-y: scroll;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
-  overflow: scroll;
+  gap: 30px;
 }
 #section-1 {
   background-color: #cdf6fa;
+}
+#section-2 {
+  background-color: #b2f2f8;
+}
+#section-3 {
+  background-color: #91edf5;
 }
 table {
 	border-spacing: 0rem;
@@ -123,7 +138,6 @@ th, td {
   background-color: lightgreen;
   font-size:20px;
 }
-
 th {
   background-color: rgb(25, 244, 25);
 	color: blue;
@@ -151,18 +165,37 @@ td:hover a {
   text-align: center;
 }
 
+.table-A {
+  flex: 0 1 auto;
+}
+
 div.heading {
 	text-align: center;
 	color: darkorange;
 }
 /*==================Clock===================*/
-.clock_container {
-  height: 35%;
+.bill-board {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  gap: 15px;
+  padding: 10px;
+}
+
+.clock-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.quote-container {
+  padding: 20px 50px;
+  width: 50%;
+  border: 3px solid rgb(240, 136, 157);
+  display: flex;
   flex-direction: column;
-  z-index: -1;
+  margin: 20px 50px;
+  display: none;
 }
 
 .datetime {
@@ -177,12 +210,33 @@ div.heading {
     linear-gradient(transparent, rgba(255, 255, 255, 0.1));
   transition: 0.5s;
   transition-property: background, box-shadow;
-  z-index: -1;
+  margin: 0 auto;
+}
+
+.quote-container .category {
+  margin-top: -40px;
+  margin-bottom: 20px;
+  background-color: hsl(204, 82%, 69%);
+  border: 3px solid hsl(204, 92%, 59%);
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+}
+.quote-container .quote {
+  margin-bottom: 10px;
+  font-family: Chewy, sans-serif;
+  font-size: 25px;
+  /* font-weight: bold; */
+}
+.quote-container .author {
+  text-align: right;
+  padding-right: 30px;
 }
 
 .datetime:hover {
   background: #2e94e3;
   box-shadow: 0 0 30px #2e94e3;
+  cursor: pointer;
 }
 
 .date {
@@ -216,4 +270,6 @@ div.heading {
   padding: 0 5px;
   border-radius: 3px;
 }
+
+
 
