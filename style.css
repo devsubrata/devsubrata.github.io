@@ -30,6 +30,10 @@ body {
   height: 50px;
   padding: 0;
   list-style: none;
+  text-wrap: wrap;
+}
+.ps {
+  width: 170px;
 }
 
 .arrow {
