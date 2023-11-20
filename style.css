@@ -281,8 +281,15 @@ div.heading {
 /**----------responsive-----**/
 
 @media screen and (max-width: 600px) {
+  .flex-container {
+    position: relative;
+  }
   .bill-board {
-    flex-direction: column;
+    display: block;
+  }
+  .clock-container, .quote-container {
+    width: 100%;
+    margin: 20px auto;
   }
   .quote-container .category {
     width: 110%;
@@ -290,6 +297,7 @@ div.heading {
 
   .plain-clock {
     display: block;
+    margin-bottom: 50px;
   }
 
   .datetime {
