@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Readify",
+    "version": "1.0",
+    "description": "archive.is cleaner",
+    "permissions": ["activeTab", "storage"],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://archive.is/*",
+                "https://ieltsliz.com/*",
+                "https://www.bbc.com/*",
+                "https://en.wikipedia.org/*",
+                "https://www.newyorker.com/*",
+                "https://www.theatlantic.com/*",
+                "https://www.newyorker.com/*",
+                "https://www.theguardian.com/*",
+                "https://www.ldoceonline.com/dictionary/*",
+                "https://www.smithsonianmag.com/*"
+            ],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
