@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Search Online",
+    "description": "Search selected text in online via context menu.",
+    "version": "1.0",
+    "permissions": ["contextMenus", "scripting", "tabs", "windows", "system.display"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "host_permissions": ["<all_urls>"],
+    "web_accessible_resources": [
+        {
+            "resources": ["links.js"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "action": {
+        "default_title": "Search Online"
+    }
+}
